@@ -14,9 +14,14 @@ function VisualizarAparelho() {
   return (
     <div className={styles.container}>
       <h2>{aparelho.nome}</h2>
-      <img src={aparelho.imagem} alt={aparelho.nome} className={styles.smartphoneImage} />
+      <img
+        src={aparelho.imagem}
+        alt={aparelho.nome}
+        className={styles.smartphoneImage}
+      />
       <p className={styles.descricaoExtensa}>{aparelho.descricaoExtensa}</p>
-      <p className={styles.preco}>Preço: {aparelho.preco}</p>
+      <p className={styles.preco}>Preço: ${aparelho.preco}</p>
+      <a href="/aparelhos" className={styles.goBackLink}>Voltar</a>
     </div>
   );
 }
