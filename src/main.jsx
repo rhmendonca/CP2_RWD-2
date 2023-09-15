@@ -6,6 +6,7 @@ import App from './App.jsx'
 import Home from './assets/routes/Home/Home.jsx';
 import Aparelhos from './assets/routes/Aparelhos/Aparelhos.jsx';
 import VizualizarAparelho from './assets/routes/VisualizarAparelho/VisualizarAparelho.jsx';
+import Error from './assets/routes/Error/Error.jsx'
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <Home /> },
       { path: '/aparelhos', element: <Aparelhos /> },
-      { path: '/vizualizaraparelho', element: <VizualizarAparelho /> }
+      { path: '/aparelhos/:id', element: <VizualizarAparelho /> }
     ]
   }
 ]);
