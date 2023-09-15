@@ -1,5 +1,5 @@
 import S22 from '../assets/img/celulares/S22.png';
-import Pro14 from '../assets/img/celulares/14pro.jpg';
+import Pro14 from '../assets/img/celulares/Pro14.jpg';
 import GP6 from '../assets/img/celulares/GP6.jpg';
 import O9T from '../assets/img/celulares/9T.jpg';
 import Mi11 from '../assets/img/celulares/Mi11.jpg';
