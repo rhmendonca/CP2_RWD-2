@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Aparelhos.module.css';
+import styles from './index.module.css';
 import aparelhosData from '../../data/aparelhosData.jsx';
 
 function Aparelhos() {

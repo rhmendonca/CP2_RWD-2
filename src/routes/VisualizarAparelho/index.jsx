@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import aparelhosData from '../../data/aparelhosData.jsx';
-import styles from './VisualizarAparelho.module.css';
+import styles from './index.module.css';
 
 function VisualizarAparelho() {
   const { id } = useParams();
