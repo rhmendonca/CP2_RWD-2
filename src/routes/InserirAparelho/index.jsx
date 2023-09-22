@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { addAparelho } from '../../data/aparelhosData.jsx'
+import { addAparelho } from '../../data/aparelhosData.jsx';
 
 function InserirAparelho() {
 
     const { id } = useParams();
     const navigate = useNavigate();
 
-    // Estado para acompnhar os dados do novo aparelho
+    // Estado para acompanhar os dados do novo aparelho
     const [novoAparelho, setNovoAparelho] = useState({
         nome: '',
         descricaoCurta: '',

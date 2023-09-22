@@ -6,22 +6,21 @@ import styles from './index.module.css';
 function VisualizarAparelho() {
   const { id } = useParams();
   const navigate = useNavigate();
-
-  // Encontrar o aparelho pelo ID 
+  
+  // Encontra o aparelho pelo ID
   const aparelho = aparelhosData.find((item) => item.id === parseInt(id));
-
-//Função para lidar com a exclusão do aparelho
-const handleDelete = () => {
-  //Remove o aparelho da lista de dados (aparelhosData)
-  const index = aparelhosData.findIndex((item) => item.id === 
-  aparelho.id);
-  if (index !== -1){
-    aparelhosData.splice(index, 1);
-    //Navega de volta para a página de aparelhos
-    navigate('/aparelhos')
-  }
-
-};
+  
+  // Função para lidar com a exclusão do aparelho
+  const handleDelete = () => {
+    //Remove o aparelho da lista de dados (aparelhosData)
+    const index = aparelhosData.findIndex((item) => item.id ===
+    aparelho.id);
+    if (index !== -1) {
+      aparelhosData.splice(index, 1);
+      // Navega de volta para a página de aparelhos
+      navigate('/aparelhos');
+    }
+  };
 
   if (!aparelho) {
     return <p>Aparelho não encontrado.</p>;
@@ -29,7 +28,7 @@ const handleDelete = () => {
 
   return (
     <div className={styles.container}>
-      <h2>{aparelho.nome}</h2>
+      <h2>Detalhes de {aparelho.nome}</h2>
       <img
         src={aparelho.imagem}
         alt={aparelho.nome}
@@ -38,6 +37,7 @@ const handleDelete = () => {
       <p className={styles.descricaoExtensa}>{aparelho.descricaoExtensa}</p>
       <p className={styles.preco}>Preço: ${aparelho.preco}</p>
       <button onClick={handleDelete}>Excluir Aparelho</button>
+      <button onClick={() => navigate(`/aparelhos/${id}/editar`)}>Editar Aparelho</button>
       <button onClick={() => navigate('/aparelhos')} className={styles.goBackLink}>Voltar para a lista de Aparelhos</button>
     </div>
   );
