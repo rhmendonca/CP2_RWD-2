@@ -13,6 +13,7 @@ function Header() {
         <Link to="/aparelhos" className={styles.headerLink}>
           Aparelhos
         </Link>
+        <Link to="/aparelhos/inserir" className={styles.headerLink}> Adicionar aparelho</Link>
       </nav>
     </header>
   );
