@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './index.module.css';
-import aparelhosData from '../../data/aparelhosData.jsx';
 
 function Aparelhos() {
-  const [aparelhos, setAparelhos] = useState(aparelhosData);
+  const [aparelhos, setAparelhos] = useState([]);
+  
+  useEffect(() => {
+    fetch('http://localhost:5000/aparelhos')
+      .then((response) => response.json())
+      .then((data) => setAparelhos(data))
+      .catch((error) => {console.error('Erro ao obter aparelhos:', error);});
+  }, []);
 
   return (
     <div className={styles.container}>
